@@ -24,6 +24,10 @@
     "verify": "node scripts/verify-range.mjs"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Qrispoon/pixiv-dl.git"
+  },
   "files": [
     "bin",
     "src",

@@ -23,7 +23,7 @@ Windows 优先，Node.js 零运行时依赖，动图默认转 GIF。
 ## 安装
 
 ```powershell
-git clone https://github.com/<your-name>/pixiv-tag-dl.git
+git clone https://github.com/Qrispoon/pixiv-dl.git
 cd pixiv-tag-dl
 npm link          # 之后可直接使用 ptdl；也可以 node bin/ptdl.mjs
 ```
