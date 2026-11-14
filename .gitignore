@@ -1,0 +1,25 @@
+# ---- 凭据 / 本地私有数据 ----
+.secrets/
+ptdl.config.json
+.local/
+
+# ---- 下载产物与运行状态 ----
+downloads/
+downloads-*/
+.pixivdl/
+*.part
+
+# ---- 本地助手/研究资料 ----
+AGENTS.md
+research/
+
+# ---- Node ----
+node_modules/
+npm-debug.log*
+*.tgz
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

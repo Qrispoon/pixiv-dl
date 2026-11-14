@@ -1,0 +1,39 @@
+{
+  "name": "pixiv-tag-dl",
+  "version": "0.2.0",
+  "private": true,
+  "description": "CLI to download Pixiv artworks by tag with a minimum bookmark filter, named as {artist}-{pid}-{bookmarks}",
+  "type": "module",
+  "bin": {
+    "ptdl": "./bin/ptdl.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "keywords": [
+    "pixiv",
+    "downloader",
+    "cli",
+    "ugoira",
+    "gif"
+  ],
+  "scripts": {
+    "test": "node --test test/",
+    "doctor": "node scripts/probe.mjs",
+    "login": "node scripts/login.mjs",
+    "verify": "node scripts/verify-range.mjs"
+  },
+  "license": "MIT",
+  "files": [
+    "bin",
+    "src",
+    "scripts/login.mjs",
+    "scripts/probe.mjs",
+    "scripts/coverage-lab.mjs",
+    "scripts/verify-range.mjs",
+    "docs/*.md",
+    "README.md",
+    "LICENSE",
+    "ptdl.config.example.json"
+  ]
+}

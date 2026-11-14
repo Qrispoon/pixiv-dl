@@ -1,0 +1,14 @@
+# npm 发布时排除（package.json 的 files 白名单为主，这里是补充）
+.secrets/
+.local/
+downloads/
+downloads-*/
+.pixivdl/
+*.part
+AGENTS.md
+ptdl.config.json
+test/
+docs/evidence/
+docs/assets/
+npm-debug.log*
+*.tgz

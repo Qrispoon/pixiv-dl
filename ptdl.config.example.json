@@ -1,0 +1,18 @@
+{
+  "proxy": "http://127.0.0.1:10090",
+  "out": "D:/pixiv",
+  "minBookmarks": 1000,
+  "maxBookmarks": null,
+  "ugoira": "gif",
+  "ugoiraWidth": 540,
+  "keepUgoiraZip": false,
+  "name": "{artist}-{id}-{bookmarks}",
+  "jobs": 2,
+  "delay": 2,
+  "retries": 5,
+  "timeout": 60,
+  "r18": "exclude",
+  "ai": "include",
+  "sort": "date",
+  "byTag": false
+}
