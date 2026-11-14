@@ -1,22 +1,18 @@
-# pixiv-tag-dl
+# pixiv-dl
 
 按 Pixiv 标签批量下载作品，支持最低收藏数过滤，文件名固定为 `{画师}-{pid}-{收藏数}`。
-Windows 优先，Node.js 零运行时依赖，动图默认转 GIF。
-
-> 非官方工具，仅用于个人备份自己有权访问的内容。请遵守 Pixiv 服务条款，控制请求频率。
 
 ## 功能
 
 - 按标签搜索（支持多标签、精确/部分匹配、日期范围）
 - 收藏数下限/上限、R-18、AI、作品类型过滤
 - 原图多页下载：`_p0/_p1/...`
-- 动图 ugoira：默认转 GIF，可切换 MP4 / 原始 ZIP
+- 动图 ugoira：默认转 GIF，可切换 MP4 / ZIP
 - 断点续跑、失败清单 `ptdl retry`、并发下载、限速与 429 冷却
 - 本机 HTTP(S) 代理支持（`--proxy` 或 `HTTPS_PROXY`）
 
 ## 环境要求
 
-- Windows 10/11（其他平台未测试）
 - Node.js **>= 24**
 - 动图转码：`ffmpeg`（Windows 自带 `tar` 用于解 zip）
 
@@ -83,31 +79,12 @@ node scripts/login.mjs --cookie "PHPSESSID=..."
 复制 [`ptdl.config.example.json`](ptdl.config.example.json) 为 `ptdl.config.json`（或放到 `%APPDATA%\pixiv-tag-dl\config.json`）。
 优先级：CLI > 环境变量 > 项目配置 > 用户配置 > 默认值。
 
-## 文档
-
-- [可行性报告（接口实测与限制）](docs/01-可行性报告.md)
-- [项目方案（架构/算法/里程碑）](docs/02-项目方案.md)
-- [命令速查](docs/03-命令速查.md)
-- [M2 开发计划](docs/04-M2开发计划.md)
-- [M1 测试报告](docs/05-M1测试报告-西行寺幽々子.md)
-- [同类工具调研](docs/06-同类工具调研.md)
-
-## 目录
-
-```
-bin/ptdl.mjs   CLI 入口
-src/           实现（auth/http/pixiv/scan/filter/naming/state/download/ugoira）
-test/          node:test 单测
-scripts/       login / probe / coverage-lab / verify-range
-docs/          报告与文档
-```
-
 ## 已知限制
 
-- 单日可见作品超过约 1 万时，非 Premium 账号无法保证枚举完整（会告警，不静默）；
-- 非 Premium 账号没有服务端收藏数过滤/热门排序，扫描量较大；
-- 受限/R-18 原图可能需要浏览器 cookie；
-- 请自行控制频率，避免账号被临时限制。
+- 单日可见作品超过约 1 万时，非 Premium 账号无法保证枚举完整；
+- 非 Premium 账号扫描量较大；
+- 受限/R-18 原图需要浏览器 cookie；
+- 需要自行控制频率，避免账号被临时限制。
 
 ## License
 
